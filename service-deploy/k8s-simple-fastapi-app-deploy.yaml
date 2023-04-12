@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: my-app
+  name: my-app
+spec:
+  replicas: 10
+  selector:
+    matchLabels:
+      app: my-app
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: my-app
+    spec:
+      containers:
+      - image: debakarr/simple-fastapi-app:1.0.0
+        name: simple-fastapi-app
+        ports:
+        - containerPort: 80
+        resources: {}
+status: {}
