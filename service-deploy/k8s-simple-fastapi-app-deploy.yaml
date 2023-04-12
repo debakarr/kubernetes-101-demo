@@ -5,6 +5,7 @@ metadata:
   labels:
     app: my-app
   name: my-app
+  namespace: demo
 spec:
   replicas: 10
   selector:
